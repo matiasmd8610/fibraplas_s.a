@@ -1,0 +1,16 @@
+{
+  "name": "fibraplas_s.a",
+  "version": "1.0.0",
+  "description": "Fibraplas S.A",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-dev": "sass --watch --update --style=expanded assets/styles/scss:assets/styles/css",
+    "sass-prod": "sass --no-source-map --style=compressed assets/styles/scss:assets/styles/css"
+  },
+  "author": "Matias Di Iorio",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.89.0"
+  }
+}
