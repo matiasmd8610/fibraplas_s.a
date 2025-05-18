@@ -11,6 +11,8 @@
   "author": "Matias Di Iorio",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.89.0"
+    "@tailwindcss/cli": "^4.1.7",
+    "sass": "^1.89.0",
+    "tailwindcss": "^4.1.7"
   }
 }

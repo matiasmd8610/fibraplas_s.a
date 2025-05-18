@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@layer base {
+  :root {
+    --color-white: #fff;
+    --color-text-main: #222;
+    --color-black: #000;
+  }
+}
+
+@utility container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1440px;
+}
+
+@layer components {
+
+}
