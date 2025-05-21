@@ -22,12 +22,22 @@
 
 }
 
-/* header {
+header {
 
 }
+
+main .servicios_tarjetas{
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 8px;
+
+  }
+    
+  
 
 footer {
   
 }
- */
+
 
