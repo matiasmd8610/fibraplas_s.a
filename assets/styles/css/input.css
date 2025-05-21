@@ -22,18 +22,24 @@
 
 }
 
-header {
-
+header { background-color: rgb(208, 118, 49);
+  
 }
 
-main .servicios_tarjetas{
-      display: grid;
-      justify-content: center;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 8px;
+ .Servicios_grupo {
+  row-gap: 10px;
 
-  }
-    
+ 
+              .Servicios_grupo_tarjetas {
+                margin: 10px;
+
+                
+  
+  
+  
+
+              }
+    } 
   
 
 footer {

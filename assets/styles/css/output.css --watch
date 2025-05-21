@@ -1406,10 +1406,6 @@
     font-size: var(--text-base);
     line-height: calc(var(--spacing) * 6);
   }
-  .text-base\/7 {
-    font-size: var(--text-base);
-    line-height: calc(var(--spacing) * 7);
-  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -1600,7 +1596,7 @@
   }
 }
 @layer components;
-main .servicios_tarjetas {
+main .Servicios {
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
