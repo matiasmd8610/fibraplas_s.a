@@ -22,7 +22,7 @@
 
 }
 
-header { background-color: rgb(208, 118, 49);
+header { background-color: rgb(204, 202, 70);
   
 }
 
@@ -40,6 +40,25 @@ header { background-color: rgb(208, 118, 49);
 
               }
     } 
+
+    #aislaciones{
+      background-image: linear-gradient(rgba(255, 255, 255, 0.8)), url(../../images/2149343697.jpg);
+      background-size: cover;
+      
+  
+    }
+    #pintura{
+      background-image: linear-gradient(rgba(255, 255, 255, 0.7)), url(../../images/2149343641.jpg);
+      background-size: cover;
+      
+  
+    }
+  #mat_adic{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7)), url(../../images/2149343641.jpg);
+    background-size: cover;
+    
+
+  }
   
 
 footer {

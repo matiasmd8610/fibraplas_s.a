@@ -723,6 +723,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-200: oklch(88.5% 0.062 18.334);
     --color-red-300: oklch(80.8% 0.114 19.571);
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-amber-700: oklch(55.5% 0.163 48.998);
@@ -771,6 +772,8 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -1090,6 +1093,9 @@
   .h-9 {
     height: calc(var(--spacing) * 9);
   }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
@@ -1107,6 +1113,12 @@
   }
   .w-9 {
     width: calc(var(--spacing) * 9);
+  }
+  .w-14 {
+    width: calc(var(--spacing) * 14);
+  }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
   }
   .w-36 {
     width: calc(var(--spacing) * 36);
@@ -1365,6 +1377,9 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
@@ -1379,6 +1394,9 @@
   }
   .pl-16 {
     padding-left: calc(var(--spacing) * 16);
+  }
+  .pl-20 {
+    padding-left: calc(var(--spacing) * 20);
   }
   .text-center {
     text-align: center;
@@ -1546,14 +1564,9 @@
       line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
   }
-  .md\:col-span-2 {
+  .md\:grid-cols-2 {
     @media (width >= 48rem) {
-      grid-column: span 2 / span 2;
-    }
-  }
-  .lg\:col-span-1 {
-    @media (width >= 64rem) {
-      grid-column: span 1 / span 1;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .lg\:mt-24 {
@@ -1596,11 +1609,17 @@
   }
 }
 @layer components;
-main .Servicios {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 8px;
+header {
+  background-color: rgb(105, 50, 8);
+}
+.Servicios_grupo {
+  row-gap: 10px;
+  .Servicios_grupo_tarjetas {
+    margin: 10px;
+  }
+}
+#mat_adic {
+  background-image: url(../../images/2149343641.jpg);
 }
 @property --tw-rotate-x {
   syntax: "*";
