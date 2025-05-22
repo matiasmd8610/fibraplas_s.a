@@ -5,6 +5,20 @@ window.addEventListener('scroll', function () {
   header.classList.toggle("sticky", window.scrollY > 0);
 });
 
+/*Menu mobile
+*************************************************/
+const menuMobile = document.querySelector(".menuMobile");
+menuMobile.addEventListener("click", ()=> {
+  menuMobile.classList.toggle("active");
+  document.querySelector("header nav").classList.toggle("active");
+})
+
+const btnCloseMenu = document.querySelector(".btn-closeMenu");
+btnCloseMenu.addEventListener("click", ()=> {
+  menuMobile.classList.remove("active");
+  document.querySelector("header nav").classList.remove("active");
+})
+
 
 /*Update copy automatically
 **************************************************/

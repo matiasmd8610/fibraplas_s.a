@@ -1,12 +1,12 @@
 @import "../../../node_modules/aos/dist/aos.css";
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 @layer base {
   :root {
     --color-white: #fff;
     --color-text-main: #222;
     --color-black: #000;
+    --color-blue-main: #00BFFE;
   }
 }
 
@@ -22,8 +22,197 @@
 
 }
 
-header { background-color: rgb(204, 202, 70);
-  
+@keyframes transitionHeader {
+  0% {
+      top: -6rem;
+  }
+
+  100% {
+      top: 0;
+  }
+}
+ 
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.color-blue-main {
+  color: var(--color-blue-main);
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+
+  &.sticky {
+    box-shadow: 0 0 12px 0px #9d9d9d;
+    animation: transitionHeader 1s;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    .header-top {
+      display: none;
+    }
+
+    .logo {
+      transform: top 0.3s ease;
+      width: 240px;
+      top: .75rem;
+    }
+
+  }
+
+  .header-top {
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .logo {
+    transition: all 0.3s ease;
+    position: absolute;
+    top: -1.5rem;
+    left: 1rem;
+    z-index: 10;
+
+    @media (width <= 991px) {
+      width: 200px;
+      top: .5rem;
+    }
+
+  }
+
+  nav {
+    transition: all 0.3s ease;
+
+    @media (width <= 991px) {
+      visibility: hidden;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      transform: translateX(-100%);
+      background-color: var(--color-blue-main);
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.active {
+      visibility: visible;
+      z-index: 500;
+
+      @media (width <= 991px) {
+        transform: translateX(0);
+      }
+    }
+
+    ul {
+      li {
+        a {
+          font-weight: 700;
+          font-size: 1.2rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .menuMobile {
+    span {
+      transition: all 0.3s ease;
+      background-color: var(--color-black);
+    }
+
+    &.active {
+      span {
+        &:first-child {
+          transform: rotate(45deg) translateY(7px);
+        }
+
+        &:last-child {
+          transform: rotate(-45deg) translateY(-7px);
+        }
+      }
+    }
+  }
+}
+
+.hero-home {
+  background-image: url('/assets/images/hero_home.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
  .Servicios_grupo {
