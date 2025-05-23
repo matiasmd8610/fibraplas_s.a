@@ -1,0 +1,41 @@
+h2:after{
+  content: "";
+    display: block;
+    height: 3px;
+    background-color: rgb(31, 146, 208);
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(15px);
+  }
+
+  .quienes_somos{
+    
+  }
+
+/* **** estilos para h2 **** */
+/* .title-container {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  
+}
+
+
+.line {
+  flex: 1;
+  height: 8px;
+  background-color: #333;
+  
+  ;
+}
+
+
+.title {
+  font-size: 24px;
+  padding: 0 10px;
+}
+**** estilos para h2 **** */
