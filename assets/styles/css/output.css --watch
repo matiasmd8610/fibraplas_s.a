@@ -1457,17 +1457,9 @@
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
   }
-  .text-base\/6 {
-    font-size: var(--text-base);
-    line-height: calc(var(--spacing) * 6);
-  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
-  }
-  .text-lg\/8 {
-    font-size: var(--text-lg);
-    line-height: calc(var(--spacing) * 8);
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -1599,11 +1591,6 @@
   .sm\:mt-20 {
     @media (width >= 40rem) {
       margin-top: calc(var(--spacing) * 20);
-    }
-  }
-  .sm\:py-32 {
-    @media (width >= 40rem) {
-      padding-block: calc(var(--spacing) * 32);
     }
   }
   .sm\:text-5xl {
@@ -1803,6 +1790,10 @@ header {
           font-weight: 700;
           font-size: 1.2rem;
           text-decoration: none;
+          cursor: pointer;
+        }
+        &:hover {
+          color: white;
         }
       }
     }
@@ -1830,23 +1821,48 @@ header {
   background-repeat: no-repeat;
   height: 100vh;
 }
-.Servicios_grupo {
+.quines_somos {
+  h2 {
+    font-size: 1.3rem;
+  }
+  dt {
+    font-size: 1.2rem;
+  }
+  dd {
+    font-size: 1rem;
+  }
+}
+.Servicios {
   row-gap: 10px;
-  .Servicios_grupo_tarjetas {
+  & .Servicios_grupo_tarjetas {
     margin: 10px;
+    min-height: 400px;
+    h3 {
+      font-size: 1.3rem;
+    }
   }
 }
 #aislaciones {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8)), url(../../images/2149343697.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8)), url(../../images/productos.jpg);
   background-size: cover;
 }
 #pintura {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7)), url(../../images/2149343641.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7)), url(../../images/pintura.jpeg);
   background-size: cover;
 }
 #mat_adic {
   background-image: linear-gradient(rgba(255, 255, 255, 0.7)), url(../../images/2149343641.jpg);
   background-size: cover;
+}
+h2:after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: rgb(31, 146, 208);
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(15px);
 }
 @property --tw-rotate-x {
   syntax: "*";

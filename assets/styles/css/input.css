@@ -220,20 +220,37 @@ header {
   height: 100vh;
 }
 
- .Servicios {
-  row-gap: 10px;
 
- 
-              & .Servicios_grupo_tarjetas {
-                margin: 10px;
-                min-height: 400px;
+.quines_somos{
 
-                
+    h2{
+      font-size:1.3rem;
+    }
   
-  
-  
+    dt{
+      font-size: 1.2rem;
+    }
 
-              }
+    dd{
+      font-size: 1rem;
+    }
+
+
+  }
+.Servicios {
+    row-gap: 10px;
+
+      & .Servicios_grupo_tarjetas {
+        margin: 10px;
+        min-height: 400px;
+
+
+        h3{
+
+          font-size:1.3rem;
+        }
+
+      }
     } 
 
     #aislaciones{
