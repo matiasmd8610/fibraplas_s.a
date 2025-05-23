@@ -790,6 +790,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-blue-main: var(--color-blue-main);
   }
 }
 @layer base {
@@ -1351,6 +1352,9 @@
   .bg-blue-600 {
     background-color: var(--color-blue-600);
   }
+  .bg-blue-main {
+    background-color: var(--color-blue-main);
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
@@ -1405,6 +1409,9 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
@@ -1457,17 +1464,9 @@
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
   }
-  .text-base\/6 {
-    font-size: var(--text-base);
-    line-height: calc(var(--spacing) * 6);
-  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
-  }
-  .text-lg\/8 {
-    font-size: var(--text-lg);
-    line-height: calc(var(--spacing) * 8);
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -1748,9 +1747,8 @@ header {
       display: none;
     }
     .logo {
-      transform: top 0.3s ease;
+      transition: all 0.3s ease;
       width: 240px;
-      top: .75rem;
     }
   }
   .header-top {
@@ -1760,13 +1758,8 @@ header {
   }
   .logo {
     transition: all 0.3s ease;
-    position: absolute;
-    top: -1.5rem;
-    left: 1rem;
-    z-index: 10;
     @media (width <= 991px) {
-      width: 200px;
-      top: .5rem;
+      width: 200px !important;
     }
   }
   nav {
@@ -1824,16 +1817,34 @@ header {
   }
 }
 .hero-home {
-  background-image: url('/assets/images/hero_home.jpg');
+  background-image: url('../../images/hero_home_mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   height: 100vh;
+  @media (width >= 992px) {
+    background-image: url('../../images/hero_home.jpg');
+  }
+}
+.quines_somos {
+  h2 {
+    font-size: 1.3rem;
+  }
+  dt {
+    font-size: 1.2rem;
+  }
+  dd {
+    font-size: 1rem;
+  }
 }
 .Servicios {
   row-gap: 10px;
   & .Servicios_grupo_tarjetas {
     margin: 10px;
     min-height: 400px;
+    h3 {
+      font-size: 1.3rem;
+    }
   }
 }
 #aislaciones {
@@ -1857,6 +1868,9 @@ h2:after {
   margin-left: auto;
   margin-right: auto;
   transform: translateY(15px);
+}
+footer {
+  background-color: var(--color-blue-main);
 }
 @property --tw-rotate-x {
   syntax: "*";

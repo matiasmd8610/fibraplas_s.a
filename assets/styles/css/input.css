@@ -10,6 +10,10 @@
   }
 }
 
+@theme {
+  --color-blue-main: var(--color-blue-main);
+}
+
 @utility container {
   margin-left: auto;
   margin-right: auto;
@@ -123,9 +127,8 @@ header {
     }
 
     .logo {
-      transform: top 0.3s ease;
+      transition: all 0.3s ease;
       width: 240px;
-      top: .75rem;
     }
 
   }
@@ -138,14 +141,9 @@ header {
 
   .logo {
     transition: all 0.3s ease;
-    position: absolute;
-    top: -1.5rem;
-    left: 1rem;
-    z-index: 10;
 
     @media (width <= 991px) {
-      width: 200px;
-      top: .5rem;
+      width: 200px !important;
     }
 
   }
@@ -214,10 +212,15 @@ header {
 }
 
 .hero-home {
-  background-image: url('/assets/images/hero_home.jpg');
+  background-image: url('../../images/hero_home_mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   height: 100vh;
+  
+  @media (width >= 992px) {
+    background-image: url('../../images/hero_home.jpg');
+  }
 }
 
 
@@ -285,7 +288,7 @@ header {
 
   
 footer {
-  
+  background-color: var(--color-blue-main);
 }
 
 
