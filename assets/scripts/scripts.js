@@ -24,6 +24,16 @@ btnCloseMenu.addEventListener("click", ()=> {
 **************************************************/
 document.querySelector(".year-copy").innerText = new Date().getFullYear();
 
+/*Progress Bar scroll
+**********************************************/
+var progressBar = document.querySelector("#progress-bar span");
+var totalHeight = document.body.scrollHeight - window.innerHeight;
+
+window.addEventListener("scroll", function() {
+  var currentHeight = window.pageYOffset;
+  var progress = currentHeight / totalHeight * 100;
+  progressBar.style.width = progress + "%";
+});
 
 /*AOS Init
 *******************************************************/

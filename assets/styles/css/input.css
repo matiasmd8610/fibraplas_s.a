@@ -7,6 +7,8 @@
     --color-text-main: #222;
     --color-black: #000;
     --color-blue-main: #00BFFE;
+    --color-blue-secondary: #007ca5;
+    --color-whatsapp: #1fca1f;
   }
 }
 
@@ -23,7 +25,24 @@
 }
 
 @layer components {
-
+  #progress-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 4px;
+      transition: width 0.5s linear;
+      z-index: 9999;
+      background-color: transparent;
+      width: 100%;
+      
+      span {
+          background-color: var(--color-blue-main);
+          display: block;
+          width: 0;
+          height: 100%;
+      }
+  }
 }
 
 @keyframes transitionHeader {
@@ -116,6 +135,7 @@ a {
 header {
   background-color: rgba(255, 255, 255, 0.4);
   transition: all 0.3s ease;
+  z-index: 200;
 
   &.sticky {
     box-shadow: 0 0 12px 0px #9d9d9d;
@@ -128,7 +148,12 @@ header {
 
     .logo {
       transition: all 0.3s ease;
-      width: 240px;
+      width: 220px;
+      margin-left: 3.5rem;
+    }
+
+    .isologo {
+      display: block;
     }
 
   }
@@ -137,6 +162,23 @@ header {
     background-color: rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     overflow: hidden;
+
+    a {
+      @media (width <= 992px) {
+        font-size: 12px;
+      }
+
+      &:hover {
+        color: var(--color-blue-main);
+      }
+    }
+
+    svg {
+      @media (width <= 992px) {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
   }
 
   .logo {
@@ -154,7 +196,7 @@ header {
     @media (width <= 991px) {
       visibility: hidden;
       position: fixed;
-      z-index: 9999;
+      z-index: 100;
       left: 0;
       top: 0;
       transform: translateX(-100%);
@@ -180,13 +222,53 @@ header {
         
         a {
           font-weight: 700;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           text-decoration: none;
-          cursor:pointer
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          
+          @media (width >= 992px) {
+            font-size: 1.2rem;
+          }
+
+          &::after,
+          &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1.5px;
+            background: linear-gradient(to right, var(--color-black), var(--color-black));
+            bottom: -2px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease-out;
+          }
+
+          &::before {
+            top: -2px;
+            transform-origin: left;
+          }
+
+          &:hover::after,
+          &:hover::before {
+            transform: scaleX(1);
+          }
+
         }
-         &:hover {
-          color: white;
-         }
+
+         /* &:hover {
+          color: var(--color-white);
+         } */
+      }
+    }
+
+    .social-links {
+      svg {
+        path {
+          fill: var(--color-black);
+        }
       }
     }
   }
@@ -289,6 +371,11 @@ header {
   
 footer {
   background-color: var(--color-blue-main);
+
+  .whatsapp-button {
+    background-color: var(--color-whatsapp);
+    animation: bounce-in-top 1.1s both;
+  }
 }
 
 

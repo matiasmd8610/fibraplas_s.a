@@ -727,6 +727,7 @@
     --color-red-300: oklch(80.8% 0.114 19.571);
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-amber-700: oklch(55.5% 0.163 48.998);
+    --color-green-700: oklch(52.7% 0.154 150.069);
     --color-teal-600: oklch(60% 0.118 184.704);
     --color-teal-700: oklch(51.1% 0.096 186.391);
     --color-blue-300: oklch(80.9% 0.105 251.813);
@@ -977,14 +978,23 @@
   .right-4 {
     right: calc(var(--spacing) * 4);
   }
+  .right-5 {
+    right: calc(var(--spacing) * 5);
+  }
+  .bottom-5 {
+    bottom: calc(var(--spacing) * 5);
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .left-5 {
+    left: calc(var(--spacing) * 5);
+  }
+  .z-40 {
+    z-index: 40;
+  }
   .z-50 {
     z-index: 50;
-  }
-  .z-\[9999\] {
-    z-index: 9999;
   }
   .container {
     width: 100%;
@@ -1059,6 +1069,9 @@
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
+  .mb-20 {
+    margin-bottom: calc(var(--spacing) * 20);
+  }
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
   }
@@ -1104,6 +1117,9 @@
   .h-3 {
     height: calc(var(--spacing) * 3);
   }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
   .h-7 {
     height: calc(var(--spacing) * 7);
   }
@@ -1113,8 +1129,17 @@
   .h-9 {
     height: calc(var(--spacing) * 9);
   }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
   .h-14 {
     height: calc(var(--spacing) * 14);
+  }
+  .h-15 {
+    height: calc(var(--spacing) * 15);
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
@@ -1131,20 +1156,35 @@
   .w-3 {
     width: calc(var(--spacing) * 3);
   }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
   .w-7 {
     width: calc(var(--spacing) * 7);
   }
   .w-9 {
     width: calc(var(--spacing) * 9);
   }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
   .w-14 {
     width: calc(var(--spacing) * 14);
+  }
+  .w-15 {
+    width: calc(var(--spacing) * 15);
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
   .w-36 {
     width: calc(var(--spacing) * 36);
+  }
+  .w-auto {
+    width: auto;
   }
   .w-full {
     width: 100%;
@@ -1321,12 +1361,19 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
   .border-blue-600 {
     border-color: var(--color-blue-600);
+  }
+  .border-blue-main {
+    border-color: var(--color-blue-main);
   }
   .border-gray-200 {
     border-color: var(--color-gray-200);
@@ -1384,6 +1431,9 @@
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
@@ -1475,6 +1525,9 @@
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-\[29px\] {
+    font-size: 29px;
   }
   .\!leading-\[1em\] {
     --tw-leading: 1em !important;
@@ -1595,6 +1648,13 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
+  .hover\:bg-green-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-700);
+      }
+    }
+  }
   .sm\:mt-20 {
     @media (width >= 40rem) {
       margin-top: calc(var(--spacing) * 20);
@@ -1614,6 +1674,11 @@
   .lg\:mt-24 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 24);
+    }
+  }
+  .lg\:block {
+    @media (width >= 64rem) {
+      display: block;
     }
   }
   .lg\:hidden {
@@ -1659,9 +1724,29 @@
     --color-text-main: #222;
     --color-black: #000;
     --color-blue-main: #00BFFE;
+    --color-blue-secondary: #007ca5;
+    --color-whatsapp: #1fca1f;
   }
 }
-@layer components;
+@layer components {
+  #progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    transition: width 0.5s linear;
+    z-index: 9999;
+    background-color: transparent;
+    width: 100%;
+    span {
+      background-color: var(--color-blue-main);
+      display: block;
+      width: 0;
+      height: 100%;
+    }
+  }
+}
 @keyframes transitionHeader {
   0% {
     top: -6rem;
@@ -1739,6 +1824,7 @@ a {
 header {
   background-color: rgba(255, 255, 255, 0.4);
   transition: all 0.3s ease;
+  z-index: 200;
   &.sticky {
     box-shadow: 0 0 12px 0px #9d9d9d;
     animation: transitionHeader 1s;
@@ -1748,13 +1834,31 @@ header {
     }
     .logo {
       transition: all 0.3s ease;
-      width: 240px;
+      width: 220px;
+      margin-left: 3.5rem;
+    }
+    .isologo {
+      display: block;
     }
   }
   .header-top {
     background-color: rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     overflow: hidden;
+    a {
+      @media (width <= 992px) {
+        font-size: 12px;
+      }
+      &:hover {
+        color: var(--color-blue-main);
+      }
+    }
+    svg {
+      @media (width <= 992px) {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
   }
   .logo {
     transition: all 0.3s ease;
@@ -1767,7 +1871,7 @@ header {
     @media (width <= 991px) {
       visibility: hidden;
       position: fixed;
-      z-index: 9999;
+      z-index: 100;
       left: 0;
       top: 0;
       transform: translateX(-100%);
@@ -1789,12 +1893,40 @@ header {
       li {
         a {
           font-weight: 700;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           text-decoration: none;
           cursor: pointer;
+          display: inline-block;
+          position: relative;
+          @media (width >= 992px) {
+            font-size: 1.2rem;
+          }
+          &::after, &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1.5px;
+            background: linear-gradient(to right, var(--color-black), var(--color-black));
+            bottom: -2px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease-out;
+          }
+          &::before {
+            top: -2px;
+            transform-origin: left;
+          }
+          &:hover::after, &:hover::before {
+            transform: scaleX(1);
+          }
         }
-        &:hover {
-          color: white;
+      }
+    }
+    .social-links {
+      svg {
+        path {
+          fill: var(--color-black);
         }
       }
     }
@@ -1871,6 +2003,10 @@ h2:after {
 }
 footer {
   background-color: var(--color-blue-main);
+  .whatsapp-button {
+    background-color: var(--color-whatsapp);
+    animation: bounce-in-top 1.1s both;
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";
