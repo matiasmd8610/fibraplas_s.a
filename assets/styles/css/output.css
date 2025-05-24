@@ -1045,6 +1045,9 @@
     padding-right: 1rem;
     max-width: 1440px;
   }
+  .mr-1 {
+    margin-right: calc(var(--spacing) * 1);
+  }
   .mr-4 {
     margin-right: calc(var(--spacing) * 4);
   }
@@ -1089,6 +1092,9 @@
   }
   .hidden {
     display: none;
+  }
+  .inline-block {
+    display: inline-block;
   }
   .table {
     display: table;
@@ -1846,6 +1852,7 @@ header {
     transition: all 0.3s ease;
     overflow: hidden;
     a {
+      font-size: 15px;
       @media (width <= 992px) {
         font-size: 12px;
       }

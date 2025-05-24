@@ -164,6 +164,8 @@ header {
     overflow: hidden;
 
     a {
+      font-size: 15px;
+
       @media (width <= 992px) {
         font-size: 12px;
       }
