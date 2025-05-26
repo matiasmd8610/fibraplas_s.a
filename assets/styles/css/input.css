@@ -308,23 +308,27 @@ header {
 }
 
 
-.quines_somos{
-
-    h2{
-      font-size:1.3rem;
-    }
   
-    dt{
-      font-size: 1.2rem;
-    }
+h2{
+  font-size: 2.3rem;
+}
 
-    dd{
-      font-size: 1rem;
-    }
+h3{
+  font-size: 1.35rem;
+}
 
-
+h2:after{
+  content: "";
+    display: block;
+    height: 3px;
+    background-color: rgb(31, 146, 208);
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(15px);
   }
-.Servicios {
+
+  .Servicios {
     row-gap: 10px;
 
       & .Servicios_grupo_tarjetas {
@@ -338,7 +342,7 @@ header {
         }
 
       }
-    } 
+  } 
 
     #aislaciones{
       background-image: linear-gradient(rgba(255, 255, 255, 0.8)), url(../../images/productos.jpg);
@@ -352,23 +356,257 @@ header {
       
   
     }
-  #mat_adic{
+    #mat_adic{
     background-image: linear-gradient(rgba(255, 255, 255, 0.7)), url(../../images/2149343641.jpg);
     background-size: cover;
     
+    }
+ 
 
-  }
+.quienes_somos{
+    background-color: #e9f9ff;
+    padding: 40px 0 40px 0;
 
-  h2:after{
+        .custom-shape-divider-bottom-1748190100 {
+        position: absolute;
+        bottom: -68px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        }
+
+        .custom-shape-divider-bottom-1748190100 svg {
+        position: relative;
+        display: block;
+        width: calc(111% + 1.3px);
+        height: 61px;
+        transform: rotateY(180deg);
+        }
+
+        .custom-shape-divider-bottom-1748190100 .shape-fill {
+        fill: #e9f9ff;
+        }
+    
+    
+    p{
+        font-size: 1.1rem;
+      }
+        
+      dt{
+        font-size: 1.15rem;
+      }
+
+      dd{
+        font-size: 1rem;
+        text-align: justify;
+      }
+
+ }
+ 
+.Servicios {
+  padding: 40px 0 40px 0;
+  row-gap: 10px;
+  
+      .custom-shape-divider-bottom-1748191126 {
+          position: relative;
+          top: -78px;
+          left: 0;
+          width: 100%;
+          overflow: hidden;
+          line-height: 0;
+          transform: rotate(180deg);
+       }
+      
+      .custom-shape-divider-bottom-1748191126 svg {
+          position: relative;
+          display: block;
+          width: calc(100% + 1.3px);
+          height: 41px;
+          transform: rotateY(180deg);
+        }
+      
+      .custom-shape-divider-bottom-1748191126 .shape-fill {
+          fill: #FFFFFF;
+        }
+
+      & .Servicios_grupo_tarjetas {
+        margin: 10px;
+        min-height: 400px;
+
+        li{
+          font-size: 1.15rem;
+        }
+        ul{
+          font-size: 1rem;
+        }
+
+
+      }
+    } 
+
+
+.obras_ejecutadas{
+
+    
+  
+  
+    .obras {
+        display: grid;
+        gap: 30px;
+        padding: 20px;
+
+        @media (min-width: 1200px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        @media (min-width: 768px) and (max-width: 1199px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .obra-item {
+        position: relative;
+        height: 300px;
+        perspective: 1000px;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        .obra-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        &.flipped .obra-inner {
+            transform: rotateY(180deg);
+        }
+
+        .obra-front,
+        .obra-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            opacity: 1;
+        }
+
+        .obra-front {
+            /* background-color: #f0f0f0; */
+            justify-content: flex-end;
+
+            img{
+              position: absolute;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            .nombre-torre {
+                font-size: 1.2rem;
+                color: #FFFFFF;
+                text-align: center;
+                width: 100%;
+                margin-bottom: 10px;
+                z-index:2
+            }
+
+            .ver-info {
+                background-color: #007bff;
+                color: white;
+                border-radius: 25px;
+                padding: 8px 12px;
+                cursor: pointer;
+                font-size: 1em;
+                transition: background-color 0.3s ease;
+                width: 30%;
+                max-width: 200px;
+                margin-bottom: 20px;
+                z-index:2;
+
+                &:hover {
+                    background-color: #0056b3;
+                }
+            }
+        }
+
+        .obra-back {
+            background-color: #c7e9ec;
+            color: rgb(0, 0, 0);
+            transform: rotateY(180deg);
+            padding: 20px;
+            justify-content: center;
+        }
+    }
+
+    .ver_todas_obras {
+                background-color: #007bff;
+                color: white;
+                border-radius: 25px;
+                padding: 8px 12px;
+                cursor: pointer;
+                font-size: 1rem;
+                transition: background-color 0.3s ease;
+                width: 30%;
+                max-width: 400px;
+                margin-bottom: 30px;
+                margin: auto;
+                
+                &:hover {
+                    background-color: #0056b3;
+                }
+            }
+
+}
+
+/* separador  hr*/
+
+.separador-animado {
+  margin: auto;
+  width:90%;
+  background: rgba(255, 255, 255, 0.8);
+  height: 2px;
+  overflow: hidden;
+  position: relative;
+  border: none;
+}
+
+.separador-animado::before {
+  animation-duration: 3.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-name: separador-animado-animacion;
+  background: #11c9c3;
   content: "";
-    display: block;
-    height: 3px;
-    background-color: rgb(31, 146, 208);
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translateY(15px);
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 90px;
+}
+
+@keyframes separador-animado-animacion {
+  0% {
+    transform: translateX(0px);
   }
+  100% {
+    transform: translateX(1440px);
+  }
+}
+
 
   
 footer {
