@@ -63,4 +63,16 @@ AOS.init({
 
 });
 
-
+  function flipCard(button) {
+            const obraItem = button.closest('.obra-item');
+            
+         
+            // Agregar clase flipped
+            obraItem.classList.add('flipped');
+            
+            // Esperar 5 segundos y volver a la posición original
+            setTimeout(() => {
+                obraItem.classList.remove('flipped');
+                
+            }, 5000);
+        }
