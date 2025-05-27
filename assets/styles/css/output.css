@@ -1465,6 +1465,9 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
+  .\!py-5 {
+    padding-block: calc(var(--spacing) * 5) !important;
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -1576,11 +1579,17 @@
   .text-wrap {
     text-wrap: wrap;
   }
+  .\!text-black {
+    color: var(--color-black) !important;
+  }
   .text-blue-500 {
     color: var(--color-blue-500);
   }
   .text-blue-700 {
     color: var(--color-blue-700);
+  }
+  .text-blue-main {
+    color: var(--color-blue-main);
   }
   .text-gray-100 {
     color: var(--color-gray-100);
@@ -1725,6 +1734,12 @@
       padding-inline: calc(var(--spacing) * 8);
     }
   }
+  .xl\:text-5xl {
+    @media (width >= 80rem) {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
   .xl\:text-6xl {
     @media (width >= 80rem) {
       font-size: var(--text-6xl);
@@ -1739,6 +1754,7 @@
     --color-black: #000;
     --color-blue-main: #00BFFE;
     --color-blue-secondary: #007ca5;
+    --color-blue-third: #006384;
     --color-whatsapp: #1fca1f;
   }
 }
@@ -1821,6 +1837,9 @@ body {
   line-height: 1.4;
   font-weight: 400;
 }
+main {
+  margin-top: 120px;
+}
 section {
   padding: 4rem 0;
 }
@@ -1836,7 +1855,7 @@ a {
   color: var(--color-blue-main);
 }
 header {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 191, 254, 0.15);
   transition: all 0.3s ease;
   z-index: 200;
   &.sticky {
@@ -1856,7 +1875,7 @@ header {
     }
   }
   .header-top {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 191, 254, 0.5);
     transition: all 0.3s ease;
     overflow: hidden;
     a {
@@ -1922,15 +1941,11 @@ header {
             width: 100%;
             height: 1.5px;
             background: linear-gradient(to right, var(--color-black), var(--color-black));
-            bottom: -2px;
+            bottom: -3px;
             left: 0;
             transform: scaleX(0);
             transform-origin: right;
             transition: transform 0.4s ease-out;
-          }
-          &::before {
-            top: -2px;
-            transform-origin: left;
           }
           &:hover::after, &:hover::before {
             transform: scaleX(1);
@@ -1967,11 +1982,14 @@ header {
   background-image: url('../../images/hero_home_mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh;
+  background-position: left center;
+  height: calc(100vh - 225px);
   @media (width >= 992px) {
-    background-image: url('../../images/hero_home.jpg');
+    background-image: url('../../images/hero_home_02.jpg');
   }
+}
+.main-banner {
+  background-color: var(--color-white);
 }
 h2 {
   font-size: 2.3rem;
