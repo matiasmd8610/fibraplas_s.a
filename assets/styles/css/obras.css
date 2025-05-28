@@ -7,16 +7,18 @@
   }
 
   table {
-    width: 90%;
+    width: 80%;
     border-collapse: collapse;
     margin: auto;
-    font-size: 0.9rem;
-    table-layout: fixed
+    font-size: 0.8rem;
+    /* table-layout: fixed */
   }
 
   thead tr th {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
+    background-color: purple;
+    color: #fff;
   }
 
   table,
@@ -48,9 +50,19 @@
     background-color: rgb(255, 255, 255);
     width: 33%;
   }
-
-
-
-
-
+ 
+  .image-cell {
+     
+      height: 350px;
+      
+      overflow: hidden;
+  }
+  
+  .image-cell img {
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover;
+      display: block; 
+  }
 }
+
