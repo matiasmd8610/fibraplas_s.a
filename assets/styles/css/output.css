@@ -2437,6 +2437,19 @@ footer {
     margin: 10px auto;
   }
 }
+thead tr th {
+  font-size: 1.4rem;
+  text-align: left;
+  background-color: purple;
+  color: #fff;
+}
+table, th, td {
+  border: 1px solid rgb(0, 0, 0);
+}
+th, td {
+  padding: 2px;
+  text-align: left;
+}
 .obras {
   h2 {
     text-align: center;
@@ -2447,19 +2460,6 @@ footer {
     border-collapse: collapse;
     margin: auto;
     font-size: 0.8rem;
-  }
-  thead tr th {
-    font-size: 1.4rem;
-    text-align: center;
-    background-color: purple;
-    color: #fff;
-  }
-  table, th, td {
-    border: 1px solid rgb(0, 0, 0);
-  }
-  th, td {
-    padding: 2px;
-    text-align: left;
   }
   td:nth-child(1) {
     color: rgb(0, 0, 0);
