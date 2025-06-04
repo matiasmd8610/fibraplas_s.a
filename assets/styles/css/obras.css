@@ -22,6 +22,10 @@
     text-align: justify;
 }
 
+.terrazas p:nth-child(2), .terrazas p:nth-child(3), .terrazas p:nth-child(4){
+  border-bottom: silver 2px solid;
+}
+
 
 .referencia_de_obras{
       margin-top: 90px;
@@ -49,13 +53,12 @@ td:nth-child(2){
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 10px;
 }
+   
 
 .obras-ejecutadas-table-container .obras-images img {
     max-width: 48%;
     height: auto;
-    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 

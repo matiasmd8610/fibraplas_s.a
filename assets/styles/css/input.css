@@ -856,18 +856,26 @@ footer {
     color: rgb(0, 0, 0);
     background-color: silver;
     width: 33%;
+
+    
   }
 
   td:nth-child(2) {
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     width: 33%;
+     
+   
   }
 
   td:nth-child(3) {
 
     background-color: rgb(255, 255, 255);
     width: 33%;
+
+     /* @media (width <= 992px) {
+         width: 43%;
+      } */
   }
  
   .image-cell {
