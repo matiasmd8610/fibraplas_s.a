@@ -1,7 +1,11 @@
 /*Sticky header
 *****************************************************/
+var header = document.querySelector('header');
+if (window.scrollY > 50) {
+  header.classList.add("sticky");
+}
+
 window.addEventListener('scroll', function () {
-  var header = document.querySelector('header');
   header.classList.toggle("sticky", window.scrollY > 50);
 });
 

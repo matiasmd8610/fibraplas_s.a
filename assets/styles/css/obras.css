@@ -1,66 +1,57 @@
 .terrazas {
   width: 80%;
-  margin:auto;
-    
-}
+  margin: auto;
 
-.terrazas h2 {
- 
+  h2 {
     padding-bottom: 10px;
-    margin-bottom: 35px;
     text-align: center;
-
+    
+    &:nth-child(2) {
+      margin-top: 30px;
+    }
+    
+    p {
+      text-align: justify;
+    }
+  }
+  
   
 }
 
-.terrazas h2:nth-child(2) {
-      margin-top: 30px;
-    }
 
-.terrazas p {
-    
-    text-align: justify;
-}
-
-.terrazas p:nth-child(2), .terrazas p:nth-child(3), .terrazas p:nth-child(4){
-  border-bottom: silver 2px solid;
-}
-
-
-.referencia_de_obras{
-      margin-top: 90px;
+.referencia_de_obras {
+  margin-top: 90px;
 
 }
 
 
 
 /* Estilos específicos para la tabla de "REFERENCIAS DE OBRAS EJECUTADAS" */
+.obras-ejecutadas-table-container table td,
 .obras-ejecutadas-table-container table td {
-  padding:8px;
+  padding: 0.75rem;
+  border: 2px solid var(--color-black);
 }
 
-.obras-ejecutadas-table-container table tr:nth-child(odd){
+.obras-ejecutadas-table-container table tr:nth-child(odd) {
   background-color: silver;
   font-weight: bold;
 }
 
-td:nth-child(2){
+td:nth-child(2) {
   width: 66%;
 }
 
 
 .obras-ejecutadas-table-container .obras-images {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-   
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
-.obras-ejecutadas-table-container .obras-images img {
+  img {
     max-width: 48%;
     height: auto;
     box-sizing: border-box;
+  }
 }
-
-
 
