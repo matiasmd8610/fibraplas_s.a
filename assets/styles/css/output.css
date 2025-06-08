@@ -1051,9 +1051,6 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
-  }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
@@ -1356,9 +1353,6 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .gap-12 {
-    gap: calc(var(--spacing) * 12);
-  }
   .gap-16 {
     gap: calc(var(--spacing) * 16);
   }
@@ -1549,8 +1543,8 @@
   .\!py-5 {
     padding-block: calc(var(--spacing) * 5) !important;
   }
-  .\!py-32 {
-    padding-block: calc(var(--spacing) * 32) !important;
+  .\!py-20 {
+    padding-block: calc(var(--spacing) * 20) !important;
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
@@ -1752,9 +1746,6 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
-  .filter {
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -1805,11 +1796,6 @@
       outline-style: none;
     }
   }
-  .sm\:mt-20 {
-    @media (width >= 40rem) {
-      margin-top: calc(var(--spacing) * 20);
-    }
-  }
   .sm\:text-5xl {
     @media (width >= 40rem) {
       font-size: var(--text-5xl);
@@ -1824,11 +1810,6 @@
   .lg\:mt-16 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 16);
-    }
-  }
-  .lg\:mt-24 {
-    @media (width >= 64rem) {
-      margin-top: calc(var(--spacing) * 24);
     }
   }
   .lg\:block {
@@ -2071,6 +2052,7 @@ p {
 }
 form {
   input, textarea {
+    border: 2px solid #ddd;
     transition: all 0.3s ease;
     background-color: var(--color-white);
     &:focus {
@@ -2509,14 +2491,24 @@ footer {
 }
 .impermeabilizante_bloques {
   text-align: center;
+  table {
+    tr {
+      td {
+        color: var(--color-black) !important;
+        span {
+          color: #0056b3 !important;
+        }
+      }
+    }
+  }
   .diagrama {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
     margin-bottom: 20px;
-    font-style: italic;
+    gap: 2rem;
     .imagen {
       width: 500px;
       img {
@@ -2526,13 +2518,13 @@ footer {
     .descripcion {
       margin: auto 0;
       width: 300px;
-      font-weight: bold;
+      font-weight: 700;
       ol {
         text-align: left;
         li {
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           span {
-            color: blue;
+            color: #0056b3;
           }
         }
       }
@@ -2619,20 +2611,6 @@ table {
 }
 .sectionForm {
   position: relative;
-  background-image: url('/assets/images/bg_form.jpg');
-  background-size: cover;
-  background-position: center center;
-  &:after {
-    content: '';
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    z-index: 1;
-    display: block;
-    left: 0;
-    top: 0;
-  }
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -2766,59 +2744,6 @@ table {
   inherits: false;
   initial-value: solid;
 }
-@property --tw-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-sepia {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-drop-shadow-size {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -2859,19 +2784,6 @@ table {
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-outline-style: solid;
-      --tw-blur: initial;
-      --tw-brightness: initial;
-      --tw-contrast: initial;
-      --tw-grayscale: initial;
-      --tw-hue-rotate: initial;
-      --tw-invert: initial;
-      --tw-opacity: initial;
-      --tw-saturate: initial;
-      --tw-sepia: initial;
-      --tw-drop-shadow: initial;
-      --tw-drop-shadow-color: initial;
-      --tw-drop-shadow-alpha: 100%;
-      --tw-drop-shadow-size: initial;
       --tw-duration: initial;
       --tw-ease: initial;
     }

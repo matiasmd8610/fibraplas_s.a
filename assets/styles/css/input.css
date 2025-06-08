@@ -222,7 +222,7 @@ form {
 
   input,
   textarea {
-    /* border: 2px solid var(--color-black); */
+    border: 2px solid #ddd;
     transition: all 0.3s ease;
     background-color: var(--color-white);
 
@@ -795,14 +795,27 @@ footer {
 .impermeabilizante_bloques {
   text-align: center;
 
+  table {
+    tr {
+      td {
+        color: var(--color-black) !important;
+
+        span {
+          color: #0056b3 !important;
+        }
+      }
+    }
+  }
+
   .diagrama {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
     margin-bottom: 20px;
-    font-style: italic;
+    gap: 2rem;
+    /* font-style: italic; */
 
     .imagen {
       width: 500px;
@@ -815,16 +828,16 @@ footer {
     .descripcion {
       margin: auto 0;
       width: 300px;
-      font-weight: bold;
+      font-weight: 700;
 
       ol {
         text-align: left;
 
         li {
-          font-size: 0.8rem;
+          font-size: 0.9rem;
 
           span {
-            color: blue;
+            color: #0056b3;
           }
         }
       }
@@ -934,11 +947,12 @@ table {
 .sectionForm {
   position: relative;
   /* background-color: rgba(0, 191, 254, 0.15); */
-  background-image: url('/assets/images/bg_form.jpg');
+  /* background-image: url('/assets/images/bg_form.jpg');
   background-size: cover;
   background-position: center center;
+  padding-bottom: 30rem; */
 
-  &:after {
+  /* &:after {
     content: '';
     height: 100%;
     width: 100%;
@@ -948,5 +962,5 @@ table {
     display: block;
     left: 0;
     top: 0;
-  }
+  } */
 }
