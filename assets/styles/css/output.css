@@ -1311,9 +1311,6 @@
   .items-center {
     align-items: center;
   }
-  .items-end {
-    align-items: flex-end;
-  }
   .items-start {
     align-items: flex-start;
   }
@@ -2192,7 +2189,11 @@ header {
   background-position: left center;
   height: calc(100vh - 222px);
   @media (width >=992px) {
-    background-image: url('../../images/hero_home_02.jpg');
+    background-image: url('../../images/hero_fibraplas_02.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-color: var(--color-green-main);
   }
 }
 .main-banner {
