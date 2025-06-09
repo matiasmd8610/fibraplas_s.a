@@ -273,7 +273,7 @@ header {
       }
 
       &:hover {
-        color: var(--color-blue-main);
+        color: #555;
       }
     }
 
