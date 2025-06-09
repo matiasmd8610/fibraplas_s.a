@@ -57,7 +57,9 @@
         <div class="container relative py-3 flex items-center justify-between">
             <img class="hidden isologo absolute left-0 top-0 h-full w-auto" src="assets/images/isologo.jpg"
                 alt="Isologo Fibraplas" width="50">
-            <img class="logo" src="assets/images/logo_fibraplas_black.png" alt="Logo Fibraplas" width="280">
+            <a href="/">
+                <img class="logo" src="assets/images/logo_fibraplas_black.png" alt="Logo Fibraplas" width="280">
+            </a>
             <nav class="flex flex-col">
                 <div class="social-links lg:hidden flex flex-col items-center gap-2 mb-20">
                     <div class="flex items-center gap-2">
@@ -88,7 +90,7 @@
                     </div>
                 </div>
                 <button type="button" class="btn-closeMenu absolute top-3 right-3 text-4xl lg:hidden">
-                    <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -96,13 +98,14 @@
                         <path d="M6 6l12 12" />
                     </svg>
                 </button>
-                <ul class="flex flex-col lg:flex-row items-center gap-8">
+                <ul class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
                     <li><a href="/">Inicio</a></li>
-                    <li><a href="/nosotros">Nosotros</a></li>
-                    <li><a href="/servicios">Servicios</a></li>
+                    <!-- <li><a href="/#aboutUs">Nosotros</a></li> -->
+                    <!-- <li><a href="/#services">Servicios</a></li> -->
+                    <li><a href="/productos.html">Productos</a></li>
+                    <li><a href="/sistemas.html">Sistemas</a></li>
                     <li><a href="/obras.html">Obras</a></li>
-                    <li><a href="sistemas.html">Sistemas</a></li>
-                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
             <button class="menuMobile block lg:hidden" type="button" aria-label="Menu mobile navigation"
@@ -111,8 +114,6 @@
                 <span class='w-7 block h-0.5'></span>
             </button>
         </div>
-
-
     </header>
     <!-- HEADER: End -->
 
