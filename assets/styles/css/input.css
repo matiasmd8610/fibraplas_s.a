@@ -9,6 +9,7 @@
     --color-blue-main: #00BFFE;
     --color-blue-secondary: #007ca5;
     --color-blue-third: #006384;
+    --color-blue-dark-01: #3838c1;
     --color-green-main: #00dfde;
     --color-whatsapp: #1fca1f;
   }
@@ -16,6 +17,7 @@
 
 @theme {
   --color-blue-main: var(--color-blue-main);
+  --color-blue-dark-01: var(--color-blue-main);
 }
 
 @utility container {
@@ -140,13 +142,11 @@
 
 @keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
     filter: blur(12px);
     opacity: 0;
   }
 
   100% {
-    -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
   }
@@ -742,7 +742,7 @@ footer {
 .h3_azul {
   margin: 0;
   padding: 0;
-  color: #3838c1;
+  color: var(--color-blue-dark-01);
 }
 
 
@@ -757,7 +757,7 @@ footer {
   }
 
   h3 {
-    color: #3838c1;
+    color: var(--color-blue-dark-01);
   }
 
 
@@ -776,10 +776,12 @@ footer {
     }
 
 
-    td:first-child {
-      color: #3838c1;
-      background-color: #dedede;
-      width: 185px;
+    td {
+      &:first-child {
+        color: var(--color-blue-dark-01);
+        background-color: #eaeaea;
+        width: 185px;
+      }
     }
 
     th {
