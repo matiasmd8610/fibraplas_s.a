@@ -28,8 +28,8 @@
 
 /* Estilos específicos para la tabla de "REFERENCIAS DE OBRAS EJECUTADAS" */
 .obras-ejecutadas-table-container table td,
-.obras-ejecutadas-table-container table td {
-  padding: 0.5rem;
+.obras-ejecutadas-table-container table th {
+  padding: 0.75rem;
   border: 2px solid var(--color-black);
 }
 
@@ -45,13 +45,15 @@ td:nth-child(2) {
 
 .obras-ejecutadas-table-container .obras-images {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
 
   img {
-    max-width: 48%;
+    max-width: 49%;
     height: auto;
     box-sizing: border-box;
+    object-fit: cover;
+    max-height: 330px;
   }
 }
 
