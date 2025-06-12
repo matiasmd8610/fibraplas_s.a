@@ -1689,9 +1689,6 @@
   .text-blue-700 {
     color: var(--color-blue-700);
   }
-  .text-blue-dark-01 {
-    color: var(--color-blue-dark-01);
-  }
   .text-blue-main {
     color: var(--color-blue-main);
   }
@@ -1749,9 +1746,6 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
-  }
-  .filter {
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
@@ -2453,6 +2447,14 @@ h3 {
 footer {
   .footer-content {
     background-color: var(--color-blue-main);
+    img {
+      width: 20%;
+      top: -15px;
+      @media (min-width: 1200px) {
+        width: 220px;
+        top: 0;
+      }
+    }
   }
   .whatsapp-button {
     background-color: var(--color-whatsapp);
@@ -2485,7 +2487,6 @@ footer {
     th, td {
       border: 0;
       border-bottom: 2px solid var(--color-black);
-      padding: 0.5rem;
       text-align: center;
     }
     td {
@@ -2574,6 +2575,9 @@ table {
     border-collapse: collapse;
     margin: auto;
     font-size: 0.8rem;
+    @media (max-width: 767px) {
+      width: 95%;
+    }
   }
   th {
     padding: 0.5rem;
@@ -2588,18 +2592,29 @@ table {
       width: 35%;
       padding: 0 0.5rem;
       height: 40px;
+      @media (max-width: 767px) {
+        width: 20%;
+        padding: 0;
+      }
     }
     &:nth-child(2) {
       color: rgb(0, 0, 0);
       background-color: rgb(255, 255, 255);
       width: 40%;
       padding: 0 0.5rem;
+      @media (max-width: 767px) {
+        width: 20%;
+        padding: 0;
+      }
     }
     &:nth-child(3) {
       background-color: rgb(255, 255, 255);
       width: 25%;
       position: relative;
       height: 285px;
+      @media (max-width: 767px) {
+        width: 60%;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -2756,59 +2771,6 @@ table {
   inherits: false;
   initial-value: solid;
 }
-@property --tw-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-sepia {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-drop-shadow-size {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -2849,19 +2811,6 @@ table {
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-outline-style: solid;
-      --tw-blur: initial;
-      --tw-brightness: initial;
-      --tw-contrast: initial;
-      --tw-grayscale: initial;
-      --tw-hue-rotate: initial;
-      --tw-invert: initial;
-      --tw-opacity: initial;
-      --tw-saturate: initial;
-      --tw-sepia: initial;
-      --tw-drop-shadow: initial;
-      --tw-drop-shadow-color: initial;
-      --tw-drop-shadow-alpha: 100%;
-      --tw-drop-shadow-size: initial;
       --tw-duration: initial;
       --tw-ease: initial;
     }

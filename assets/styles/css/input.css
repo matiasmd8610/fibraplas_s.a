@@ -725,6 +725,18 @@ h3 {
 footer {
   .footer-content {
     background-color: var(--color-blue-main);
+
+    img{
+      width: 20%;
+      top: -15px;
+
+       @media (min-width: 1200px) {
+        width:220px;
+        top: 0;
+      
+      }
+
+    }
   }
 
   .whatsapp-button {
@@ -767,11 +779,12 @@ footer {
     margin: auto;
     font-size: 0.9rem;
 
+      
     th,
     td {
       border: 0;
       border-bottom: 2px solid var(--color-black);
-      padding: 0.5rem;
+      /* padding: 0.5rem; */
       text-align: center;
     }
 
@@ -884,6 +897,10 @@ table {
     margin: auto;
     font-size: 0.8rem;
     /* table-layout: fixed */
+
+     @media (max-width: 767px) {
+      width:95%
+      }
   }
 
   th {
@@ -901,6 +918,13 @@ table {
       width: 35%;
       padding: 0 0.5rem;
       height: 40px;
+
+       @media (max-width: 767px) {
+      width:20%;
+      padding: 0;
+      
+      }
+
     }
 
     &:nth-child(2) {
@@ -908,6 +932,11 @@ table {
       background-color: rgb(255, 255, 255);
       width: 40%;
       padding: 0 0.5rem;
+
+      @media (max-width: 767px) {
+      width:20%;
+      padding: 0;
+      }
     }
 
     &:nth-child(3) {
@@ -915,6 +944,11 @@ table {
       width: 25%;
       position: relative;
       height: 285px;
+
+      @media (max-width: 767px) {
+      width:60%;
+      
+      }
       
       img {
         width: 100%;
