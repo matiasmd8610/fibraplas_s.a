@@ -768,6 +768,21 @@ footer {
     color: #2c3e50;
   }
 
+  h2{
+
+    @media (max-width: 767px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .container{
+
+    @media (max-width: 767px) {
+      padding:0;
+    }
+  }
+  
+
   h3 {
     color: var(--color-blue-dark-01);
   }
