@@ -1,74 +1,59 @@
-.terrazas {
-  width: 80%;
-  margin: auto;
-
-  @media (max-width: 767px) {
-      width:95%
-      }
-
-  h2 {
-    padding-bottom: 10px;
-    text-align: center;
-    
-    &:nth-child(2) {
-      margin-top: 30px;
-    }
-    
-    p {
-      text-align: justify;
-    }
-  }
-  
-  
-}
-
-
 .referencia_de_obras {
   margin-top: 90px;
 
-}
+  table {
+    @media (width <=767px) {
+      width: 120vw;
+    }
 
-
-
-/* Estilos específicos para la tabla de "REFERENCIAS DE OBRAS EJECUTADAS" */
-.obras-ejecutadas-table-container table td,
-.obras-ejecutadas-table-container table th {
-  padding: 0.75rem;
-  border: 2px solid var(--color-black);
-}
-
-.obras-ejecutadas-table-container table tr:nth-child(odd) {
-  background-color: silver;
-  font-weight: bold;
-}
-
-td:nth-child(2) {
-  width: 66%;
-}
-
-
-.obras-ejecutadas-table-container .obras-images {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  flex-direction: column;
-  
-      @media (min-width: 1200px) {
-        flex-direction: row;
+    td,
+    th {
+      padding: 0.5rem 0.75rem;
+      border: 2px solid var(--color-black);
+      width: 45%;
       
+      @media (width >=992px) {
+        padding: 0.75rem;
       }
 
-  img {
-    /* max-width: 49%; */
-    height: auto;
-    box-sizing: border-box;
-    object-fit: cover;
-    max-height: 330px;
+      &:first-child {
+        font-size: 0.9rem;
+        
+        @media (width >= 992px) {
+          width: 33%;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  tr {
+    &:nth-child(odd) {
+      background-color: #dedede;
+      font-weight: 700;
+    }
+  }
+
+  .obras-images {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-direction: column;
 
     @media (min-width: 1200px) {
-       max-width: 49%;
-      
+      flex-direction: row;
+    }
+
+    img {
+      height: auto;
+      box-sizing: border-box;
+      object-fit: cover;
+      max-height: 330px;
+
+      @media (width>=1200px) {
+        max-width: 49%;
+
       }
+    }
   }
 }
-
