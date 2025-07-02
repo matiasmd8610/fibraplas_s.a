@@ -2481,7 +2481,6 @@ footer {
   color: var(--color-blue-dark-01);
 }
 .productos, .impermeabilizante_bloques {
-  text-align: center;
   h1, h2, h3 {
     color: #2c3e50;
   }
@@ -2529,7 +2528,6 @@ footer {
   }
 }
 .impermeabilizante_bloques {
-  text-align: center;
   table {
     width: 100%;
     margin-bottom: .5rem;
@@ -2551,7 +2549,7 @@ footer {
     padding: 20px 0;
     text-align: center;
     margin-bottom: 20px;
-    gap: 2rem;
+    gap: 3rem;
     @media (width >= 992px) {
       justify-content: start;
     }
@@ -2563,12 +2561,10 @@ footer {
     }
     .descripcion {
       margin: auto 0;
-      width: 300px;
       font-weight: 700;
       ol {
         text-align: left;
         li {
-          font-size: 0.9rem;
           span {
             color: #0056b3;
           }
