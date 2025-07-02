@@ -773,6 +773,7 @@ footer {
   h2,
   h3 {
     color: #2c3e50;
+    
   }
 
   h2 {
@@ -833,20 +834,24 @@ footer {
 .impermeabilizante_bloques {
   text-align: center;
 
-  table {
-    width: 100%;
-    margin-bottom: .5rem;
+    table {
+      width: 100%;
+      margin-bottom: .5rem;
 
-    tr {
-      td {
-        color: var(--color-black) !important;
+      tr {
+        td {
+          color: var(--color-black) !important;
 
-        span {
-          color: #0056b3 !important;
+          span {
+            color: #0056b3 !important;
+          }
         }
       }
     }
-  }
+
+    .h2_sinafter,.h3_azul{
+      text-align: left;
+    }
 
   .diagrama {
     display: flex;
@@ -857,7 +862,7 @@ footer {
     gap: 2rem;
     
     @media (width >= 992px) {
-      justify-content: center;
+      justify-content: start;
     }
 
     .imagen {
