@@ -292,7 +292,7 @@ header {
       }
 
       &:hover {
-        color: #555;
+        color: var(--color-blue-dark-01);
       }
     }
 
@@ -364,7 +364,7 @@ header {
             position: absolute;
             width: 100%;
             height: 1.5px;
-            background: linear-gradient(to right, var(--color-black), var(--color-black));
+            background-color: var(--color-blue-dark-01);
             bottom: -3px;
             left: 0;
             transform: scaleX(0);
@@ -377,9 +377,13 @@ header {
             transform-origin: left;
           } */
 
-          &:hover::after,
-          &:hover::before {
-            transform: scaleX(1);
+          &:hover {
+            color: var(--color-blue-dark-01);
+
+            &::after,
+            &::before {
+              transform: scaleX(1);
+            }
           }
 
         }
@@ -417,6 +421,22 @@ header {
       }
     }
   }
+
+  .socialIcons {
+    svg {
+      transition: all 0.3s ease;
+
+      &:hover {
+        stroke: var(--color-blue-dark-01);
+        transform: translateY(-2px);
+      }
+    }
+
+    @media (width>= 992px) {
+      padding-left: 1rem;
+      border-left: 1px solid var(--color-black);
+    }
+  }
 }
 
 .hero-home {
@@ -424,7 +444,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left center;
-  height: calc(100vh - 222px);
+  height: calc(100vh - 220px);
 
   @media (width >=992px) {
     /* background-image: url('../../images/hero_home_02.jpg'); */
@@ -1035,7 +1055,73 @@ table {
   }
 }
 
+.referencia_de_obras {
+  margin-top: 90px;
 
+  table {
+    @media (width <=767px) {
+      width: 120vw;
+    }
+
+    td,
+    th {
+      padding: 0.5rem 0.75rem;
+      border: 2px solid var(--color-black);
+      width: 45%;
+      
+      @media (width >=992px) {
+        padding: 0.75rem;
+      }
+
+      &:first-child {
+        font-size: 0.9rem;
+        
+        @media (width >= 992px) {
+          width: 33%;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  tr {
+    &:nth-child(odd) {
+      background-color: #dedede;
+      font-weight: 700;
+    }
+  }
+
+  .obras-images {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-direction: column;
+
+    @media (min-width: 1200px) {
+      flex-direction: row;
+    }
+
+    img {
+      height: auto;
+      box-sizing: border-box;
+      object-fit: cover;
+      max-height: 330px;
+
+      @media (width>=1200px) {
+        max-width: 49%;
+
+      }
+    }
+  }
+}
+
+
+iframe {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a11" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="%231BD1FF"></stop><stop offset=".3" stop-color="%231BD1FF" stop-opacity=".9"></stop><stop offset=".6" stop-color="%231BD1FF" stop-opacity=".6"></stop><stop offset=".8" stop-color="%231BD1FF" stop-opacity=".3"></stop><stop offset="1" stop-color="%231BD1FF" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(%23a11)" stroke-width="15" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="%231BD1FF" stroke-width="15" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>');
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  background-position: center center;
+}
 
 
 
