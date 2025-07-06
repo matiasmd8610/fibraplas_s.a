@@ -1468,9 +1468,6 @@
   .border-white {
     border-color: var(--color-white);
   }
-  .bg-\[rgba\(0\,0\,0\,0\.4\)\] {
-    background-color: rgba(0,0,0,0.4);
-  }
   .bg-amber-300 {
     background-color: var(--color-amber-300);
   }
@@ -1639,9 +1636,6 @@
   }
   .\!text-\[29px\] {
     font-size: 29px !important;
-  }
-  .text-\[29px\] {
-    font-size: 29px;
   }
   .\!leading-\[1em\] {
     --tw-leading: 1em !important;
@@ -1824,6 +1818,11 @@
       margin-top: calc(var(--spacing) * 16);
     }
   }
+  .lg\:mb-14 {
+    @media (width >= 64rem) {
+      margin-bottom: calc(var(--spacing) * 14);
+    }
+  }
   .lg\:block {
     @media (width >= 64rem) {
       display: block;
@@ -1837,11 +1836,6 @@
   .lg\:w-\[650px\] {
     @media (width >= 64rem) {
       width: 650px;
-    }
-  }
-  .lg\:max-w-\[65\%\] {
-    @media (width >= 64rem) {
-      max-width: 65%;
     }
   }
   .lg\:grid-cols-2 {
@@ -1898,12 +1892,6 @@
     @media (width >= 80rem) {
       font-size: var(--text-5xl) !important;
       line-height: var(--tw-leading, var(--text-5xl--line-height)) !important;
-    }
-  }
-  .xl\:text-6xl {
-    @media (width >= 80rem) {
-      font-size: var(--text-6xl);
-      line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
   }
 }
@@ -2069,7 +2057,7 @@ h2 {
     min-width: 50px;
     margin-left: auto;
     margin-right: auto;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
   &.sinafter {
     &::after {
@@ -2198,7 +2186,7 @@ header {
             transform-origin: right;
             transition: transform 0.4s ease-out;
           }
-          &:hover {
+          &:hover, &:focus, &.active {
             color: var(--color-blue-dark-01);
             &::after, &::before {
               transform: scaleX(1);
@@ -2232,16 +2220,18 @@ header {
     }
   }
   .socialIcons {
+    margin-top: 2rem;
+    @media (width>=992px) {
+      padding-left: 1rem;
+      border-left: 1px solid var(--color-black);
+      margin-top: 0;
+    }
     svg {
       transition: all 0.3s ease;
       &:hover {
         stroke: var(--color-blue-dark-01);
         transform: translateY(-2px);
       }
-    }
-    @media (width>= 992px) {
-      padding-left: 1rem;
-      border-left: 1px solid var(--color-black);
     }
   }
 }
@@ -2274,7 +2264,7 @@ h3 {
     color: var(--color-blue-dark-01);
     font-size: 1.4rem;
     margin-bottom: .75rem;
-    @media (width >= 992px) {
+    @media (width >=992px) {
       font-size: 1.8rem;
     }
     &::before {
@@ -2288,10 +2278,10 @@ h3 {
   }
   ul {
     padding-left: 1rem;
-    @media (width >= 992px) {
+    @media (width >=992px) {
       padding-left: 1.5rem;
     }
-    & > li {
+    &>li {
       font-weight: 700;
       font-size: 1.3rem;
       margin-bottom: 0.2rem;
@@ -2309,7 +2299,7 @@ h3 {
       ul {
         padding-left: 1rem;
         margin-bottom: 1rem;
-        @media (width >= 992px) {
+        @media (width >=992px) {
           padding-left: 2rem;
         }
         li {
@@ -2350,7 +2340,6 @@ h3 {
   dt {
     font-size: 1.3rem;
     line-height: 1.2;
-    margin-bottom: 0.25rem;
     display: inline-block;
     font-weight: 700;
     margin-top: -2px;
@@ -2521,7 +2510,7 @@ footer {
       text-align: center;
       font-size: 0.9rem;
       min-width: 120px;
-      @media (width >= 992px) {
+      @media (width >=992px) {
         padding: 0.5rem;
         padding: 0.75rem;
         font-size: 1rem;
@@ -2532,7 +2521,7 @@ footer {
         color: var(--color-blue-dark-01);
         background-color: #eaeaea;
         min-width: 165px;
-        @media (width >= 992px) {
+        @media (width >=992px) {
           min-width: 175px;
         }
       }
@@ -2556,7 +2545,7 @@ footer {
       }
     }
   }
-  .h2_sinafter,.h3_azul {
+  .h2_sinafter, .h3_azul {
     text-align: left;
   }
   .diagrama {
@@ -2566,7 +2555,7 @@ footer {
     text-align: center;
     margin-bottom: 20px;
     gap: 3rem;
-    @media (width >= 992px) {
+    @media (width >=992px) {
       justify-content: start;
     }
     .imagen {
@@ -2695,7 +2684,7 @@ table {
       }
       &:first-child {
         font-size: 0.9rem;
-        @media (width >= 992px) {
+        @media (width >=992px) {
           width: 33%;
           font-size: 1rem;
         }

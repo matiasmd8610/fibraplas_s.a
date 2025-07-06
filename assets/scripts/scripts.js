@@ -67,16 +67,18 @@ AOS.init({
 
 });
 
-  function flipCard(button) {
-            const obraItem = button.closest('.obra-item');
-            
-         
-            // Agregar clase flipped
-            obraItem.classList.add('flipped');
-            
-            // Esperar 5 segundos y volver a la posición original
-            setTimeout(() => {
-                obraItem.classList.remove('flipped');
-                
-            }, 5000);
-        }
+/*ADD ACTIVE CURRENT SECTION
+**************************************************/
+function setNavigation() {
+  let current_location = location.pathname.split('/')[1];
+  if (current_location === "") return;
+  let menu_items = document.querySelector("header nav").getElementsByTagName("a");
+
+  for (let i = 0; i < menu_items.length; i++) {
+    if (menu_items[i].getAttribute("href").indexOf(current_location) !== -1) {
+      menu_items[i].className = "active";
+    }
+  }
+}
+
+setNavigation();

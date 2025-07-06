@@ -173,7 +173,7 @@ main {
 
 section {
   padding: 2.5rem 0;
-  
+
   @media (width >=992px) {
     padding: 4rem 0;
   }
@@ -209,7 +209,7 @@ h2 {
     min-width: 50px;
     margin-left: auto;
     margin-right: auto;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
 
   &.sinafter {
@@ -239,6 +239,7 @@ strong {
 }
 
 form {
+
   input,
   textarea {
     border: 2px solid #ddd;
@@ -377,7 +378,9 @@ header {
             transform-origin: left;
           } */
 
-          &:hover {
+          &:hover,
+          &:focus,
+          &.active {
             color: var(--color-blue-dark-01);
 
             &::after,
@@ -423,6 +426,14 @@ header {
   }
 
   .socialIcons {
+    margin-top: 2rem;
+
+    @media (width>=992px) {
+      padding-left: 1rem;
+      border-left: 1px solid var(--color-black);
+      margin-top: 0;
+    }
+
     svg {
       transition: all 0.3s ease;
 
@@ -430,11 +441,6 @@ header {
         stroke: var(--color-blue-dark-01);
         transform: translateY(-2px);
       }
-    }
-
-    @media (width>= 992px) {
-      padding-left: 1rem;
-      border-left: 1px solid var(--color-black);
     }
   }
 }
@@ -475,8 +481,8 @@ h3 {
     color: var(--color-blue-dark-01);
     font-size: 1.4rem;
     margin-bottom: .75rem;
-    
-    @media (width >= 992px) {
+
+    @media (width >=992px) {
       font-size: 1.8rem;
     }
 
@@ -493,16 +499,16 @@ h3 {
   ul {
     /* list-style: circle; */
     padding-left: 1rem;
-    
-    @media (width >= 992px) {
+
+    @media (width >=992px) {
       padding-left: 1.5rem;
     }
 
-    & > li {
+    &>li {
       font-weight: 700;
       font-size: 1.3rem;
       margin-bottom: 0.2rem;
-      
+
       &::before {
         content: '♦';
         color: var(--color-blue-dark-01);
@@ -519,15 +525,15 @@ h3 {
       ul {
         padding-left: 1rem;
         margin-bottom: 1rem;
-        
-        @media (width >= 992px) {
+
+        @media (width >=992px) {
           padding-left: 2rem;
         }
 
         li {
           font-weight: 400;
           font-size: 1.2rem;
-          
+
           &::before {
             content: '➢';
             color: var(--color-blue-dark-01);
@@ -540,81 +546,27 @@ h3 {
   }
 }
 
-.services {
-  /* row-gap: 10px;
-  padding: 40px 0 40px 0;
-  row-gap: 10px; */
-
-  /* .servicios_grupo_tarjetas {
-    margin: 10px;
-
-    ul {
-      font-size: 1rem;
-      margin: 0;
-
-      li {
-        font-size: 1.15rem;
-
-        &>ul {
-          padding-left: 0.25rem;
-          margin-top: 0.2rem;
-
-          li {
-            list-style-type: "✓";
-          }
-        }
-
-      }
-    }
-
-    h3 {
-      font-size: 1.4rem;
-    }
-
-  } */
-}
-
-/* #aislaciones {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8)), url(../../images/productos.jpg);
-  background-size: cover;
-
-
-}
-
-#pintura {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7)), url(../../images/pintura.jpeg);
-  background-size: cover;
-
-
-}
-
-#mat_adic {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7)), url(../../images/2149343641.jpg);
-  background-size: cover;
-
-} */
-
 .custom-shape-divider-bottom {
+  position: relative;
+  top: -95px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+
+  svg {
     position: relative;
-    top: -95px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-
-    svg {
-      position: relative;
-      display: block;
-      width: calc(100% + 1.3px);
-      height: 41px;
-      transform: rotateY(180deg);
-    }
-
-    .shape-fill {
-      fill: var(--color-white);
-    }
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 41px;
+    transform: rotateY(180deg);
   }
+
+  .shape-fill {
+    fill: var(--color-white);
+  }
+}
 
 .quienes_somos {
   background-color: var(--color-blue-ligth);
@@ -622,7 +574,6 @@ h3 {
   dt {
     font-size: 1.3rem;
     line-height: 1.2;
-    margin-bottom: 0.25rem;
     display: inline-block;
     font-weight: 700;
     margin-top: -2px;
@@ -774,7 +725,7 @@ h3 {
     transform: none;
     top: -70px;
   }
-  
+
   ul {
     li {
       margin-bottom: 0;
@@ -784,6 +735,7 @@ h3 {
       }
     }
   }
+
   /* .products-content {
     .product-item {
       box-shadow: 0 0 15px -2px #b1b1b1;
@@ -827,7 +779,7 @@ footer {
   h2,
   h3 {
     color: #2c3e50;
-    
+
   }
 
   h2 {
@@ -842,7 +794,7 @@ footer {
 
   table {
     border-collapse: collapse;
-    
+
     @media (width <=767px) {
       font-size: 0.9rem;
       width: 170vw;
@@ -857,8 +809,8 @@ footer {
       text-align: center;
       font-size: 0.9rem;
       min-width: 120px;
-      
-      @media (width >= 992px) {
+
+      @media (width >=992px) {
         padding: 0.5rem;
         padding: 0.75rem;
         font-size: 1rem;
@@ -871,8 +823,8 @@ footer {
         color: var(--color-blue-dark-01);
         background-color: #eaeaea;
         min-width: 165px;
-        
-        @media (width >= 992px) {
+
+        @media (width >=992px) {
           min-width: 175px;
         }
       }
@@ -886,24 +838,25 @@ footer {
 }
 
 .impermeabilizante_bloques {
-    table {
-      width: 100%;
-      margin-bottom: .5rem;
+  table {
+    width: 100%;
+    margin-bottom: .5rem;
 
-      tr {
-        td {
-          color: var(--color-black) !important;
+    tr {
+      td {
+        color: var(--color-black) !important;
 
-          span {
-            color: #0056b3 !important;
-          }
+        span {
+          color: #0056b3 !important;
         }
       }
     }
+  }
 
-    .h2_sinafter,.h3_azul{
-      text-align: left;
-    }
+  .h2_sinafter,
+  .h3_azul {
+    text-align: left;
+  }
 
   .diagrama {
     display: flex;
@@ -912,8 +865,8 @@ footer {
     text-align: center;
     margin-bottom: 20px;
     gap: 3rem;
-    
-    @media (width >= 992px) {
+
+    @media (width >=992px) {
       justify-content: start;
     }
 
@@ -979,7 +932,7 @@ table {
   table {
     border-collapse: collapse;
     font-size: 0.8rem;
-    
+
     @media (width <=767px) {
       font-size: 0.75rem;
       min-width: 165vw;
@@ -1002,7 +955,7 @@ table {
       width: 35%;
       padding: 0 0.5rem;
       height: 40px;
-      
+
       @media (width<=767px) {
         padding: 0.5rem;
         width: 25%;
@@ -1014,7 +967,7 @@ table {
       background-color: rgb(255, 255, 255);
       width: 40%;
       padding: 0.2rem 0.5rem;
-      
+
       @media (width<=767px) {
         padding: 0.2rem 0.5rem;
         width: 25%;
@@ -1068,15 +1021,15 @@ table {
       padding: 0.5rem 0.75rem;
       border: 2px solid var(--color-black);
       width: 45%;
-      
+
       @media (width >=992px) {
         padding: 0.75rem;
       }
 
       &:first-child {
         font-size: 0.9rem;
-        
-        @media (width >= 992px) {
+
+        @media (width >=992px) {
           width: 33%;
           font-size: 1rem;
         }
