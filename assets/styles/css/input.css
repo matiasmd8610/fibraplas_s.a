@@ -13,6 +13,7 @@
     --color-blue-dark-01: #3838c1;
     --color-green-main: #00dfde;
     --color-whatsapp: #1fca1f;
+    --color-error: #f00000;
   }
 }
 
@@ -239,7 +240,6 @@ strong {
 }
 
 form {
-
   input,
   textarea {
     border: 2px solid #ddd;
@@ -249,6 +249,25 @@ form {
     &:focus {
       outline: 3px solid var(--color-blue-main);
       outline-offset: -2px;
+    }
+  }
+
+  .form-group-error {
+    input,
+    textarea {
+      outline: 2px solid var(--color-error);
+      outline-offset: -2px;
+    }
+  }
+
+  .error-msg {
+    color: var(--color-error);
+    font-size: 14px;
+    padding-top: 5px;
+    display: none;
+
+    &.visible {
+      display: block;
     }
   }
 }
@@ -453,7 +472,6 @@ header {
   height: calc(100vh - 220px);
 
   @media (width >=992px) {
-    /* background-image: url('../../images/hero_home_02.jpg'); */
     background-image: url('../../images/hero_fibraplas_03.jpg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -775,13 +793,6 @@ footer {
 .impermeabilizante_bloques {
   /* text-align: center; */
 
-  h1,
-  h2,
-  h3 {
-    color: #2c3e50;
-
-  }
-
   h2 {
     @media (max-width: 767px) {
       font-size: 1.8rem;
@@ -826,6 +837,12 @@ footer {
 
         @media (width >=992px) {
           min-width: 175px;
+        }
+      }
+
+      &:nth-child(3) {
+        @media (width >=992px) {
+          min-width: 200px;
         }
       }
     }

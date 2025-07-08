@@ -21,18 +21,18 @@ $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?s
 $response = json_decode($response, true);
 
 $body = <<<HTML
-    <h1 style="font-size: 22px;">Mensaje recibido desde kerlincampos.com.ar</h1>
+    <h1 style="font-size: 22px;">Mensaje recibido desde fibraplas.com.ar</h1>
     <p>De: $name | $telephone | $email</p>
     $comment
 HTML;
 
 // Datos de la cuenta de correo utilizada para enviar vía SMTP
 $smtpHost = "l0013374.ferozo.com";  // Dominio alternativo brindado en el email de alta 
-$smtpUsuario = "info@kerlincampos.com.ar";  // Mi cuenta de correo
+$smtpUsuario = "contacto@fibraplas.com.ar";  // Mi cuenta de correo
 $smtpClave = "Francia254*";  // Mi contraseña
 
 // Email donde se enviaran los datos cargados en el formulario de contacto
-$emailDestino = "info@kerlincampos.com.ar";
+$emailDestino = "contacto@fibraplas.com.ar";
 
 $mail = new PHPMailer();
 $mail->IsSMTP();
@@ -52,7 +52,7 @@ $mail->From = $email; // Email desde donde envío el correo.
 $mail->FromName = $name;
 $mail->AddAddress($emailDestino); // Esta es la dirección a donde enviamos los datos del formulario
 
-$mail->Subject = "Mensaje recibido desde kerlincampos.com.ar"; // Este es el titulo del email.
+$mail->Subject = "Mensaje recibido desde fibraplas.com.ar"; // Este es el titulo del email.
 $mail->Body = $body; // Texto del email en formato HTML
 // FIN - VALORES A MODIFICAR //
 

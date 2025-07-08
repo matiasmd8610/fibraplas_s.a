@@ -1104,9 +1104,6 @@
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
-  .mb-8 {
-    margin-bottom: calc(var(--spacing) * 8);
-  }
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
   }
@@ -1268,6 +1265,9 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
+  }
+  .max-w-full {
+    max-width: 100%;
   }
   .max-w-screen-xl {
     max-width: var(--breakpoint-xl);
@@ -1802,6 +1802,11 @@
       outline-style: none;
     }
   }
+  .max-md\:mx-auto {
+    @media (width < 48rem) {
+      margin-inline: auto;
+    }
+  }
   .sm\:text-5xl {
     @media (width >= 40rem) {
       font-size: var(--text-5xl);
@@ -1868,11 +1873,6 @@
       gap: calc(var(--spacing) * 8);
     }
   }
-  .lg\:gap-10 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 10);
-    }
-  }
   .lg\:gap-y-16 {
     @media (width >= 64rem) {
       row-gap: calc(var(--spacing) * 16);
@@ -1907,6 +1907,7 @@
     --color-blue-dark-01: #3838c1;
     --color-green-main: #00dfde;
     --color-whatsapp: #1fca1f;
+    --color-error: #f00000;
   }
 }
 @layer components {
@@ -2088,6 +2089,21 @@ form {
     &:focus {
       outline: 3px solid var(--color-blue-main);
       outline-offset: -2px;
+    }
+  }
+  .form-group-error {
+    input, textarea {
+      outline: 2px solid var(--color-error);
+      outline-offset: -2px;
+    }
+  }
+  .error-msg {
+    color: var(--color-error);
+    font-size: 14px;
+    padding-top: 5px;
+    display: none;
+    &.visible {
+      display: block;
     }
   }
 }
@@ -2486,9 +2502,6 @@ footer {
   color: var(--color-blue-dark-01);
 }
 .productos, .impermeabilizante_bloques {
-  h1, h2, h3 {
-    color: #2c3e50;
-  }
   h2 {
     @media (max-width: 767px) {
       font-size: 1.8rem;
@@ -2523,6 +2536,11 @@ footer {
         min-width: 165px;
         @media (width >=992px) {
           min-width: 175px;
+        }
+      }
+      &:nth-child(3) {
+        @media (width >=992px) {
+          min-width: 200px;
         }
       }
     }
