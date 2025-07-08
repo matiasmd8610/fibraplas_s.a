@@ -465,18 +465,16 @@ header {
 }
 
 .hero-home {
-  background-image: url('../../images/hero_home_mobile.jpg');
-  background-size: cover;
+  /* background-image: url('../../images/hero_home_mobile.jpg'); */
+  background-image: url('../../images/hero_fibraplas_03.jpg');
+  height: calc(100vh - 170px);
   background-repeat: no-repeat;
-  background-position: left center;
-  height: calc(100vh - 220px);
-
+  background-size: contain;
+  background-position: center center;
+  background-color: var(--color-blue-main);
+  
   @media (width >=992px) {
-    background-image: url('../../images/hero_fibraplas_03.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    background-color: var(--color-blue-main);
+    height: calc(100vh - 220px);
   }
 }
 
