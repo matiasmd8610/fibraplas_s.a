@@ -16,7 +16,7 @@ $telephone = $_POST["telephone"];
 $email = $_POST["email"];
 $comment = $_POST["comment"];
 
-$recaptcha_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+$recaptcha_secret = "6LdUmYQrAAAAAAEbPRlcDn7rC1GyZPwVAvkB191A";
 $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$recaptcha_secret."&response=".$_POST['g-recaptcha-response']);
 $response = json_decode($response, true);
 
@@ -27,9 +27,9 @@ $body = <<<HTML
 HTML;
 
 // Datos de la cuenta de correo utilizada para enviar vía SMTP
-$smtpHost = "l0013374.ferozo.com";  // Dominio alternativo brindado en el email de alta 
+$smtpHost = "ivar1.toservers.com";  // Dominio alternativo brindado en el email de alta 
 $smtpUsuario = "contacto@fibraplas.com.ar";  // Mi cuenta de correo
-$smtpClave = "Francia254*";  // Mi contraseña
+$smtpClave = "Fibraplas2022";  // Mi contraseña
 
 // Email donde se enviaran los datos cargados en el formulario de contacto
 $emailDestino = "contacto@fibraplas.com.ar";
@@ -37,7 +37,7 @@ $emailDestino = "contacto@fibraplas.com.ar";
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
-$mail->Port = 465; 
+$mail->Port = 25; 
 $mail->SMTPSecure = 'ssl';
 $mail->IsHTML(true); 
 $mail->CharSet = "utf-8";
@@ -56,9 +56,13 @@ $mail->Subject = "Mensaje recibido desde fibraplas.com.ar"; // Este es el titulo
 $mail->Body = $body; // Texto del email en formato HTML
 // FIN - VALORES A MODIFICAR //
 
-$estadoEnvio = $mail->Send(); 
-if($estadoEnvio){
-    header("Location: /thank-you" );
+if($response["success"] === true) {
+    $estadoEnvio = $mail->Send(); 
+    if($estadoEnvio){
+        header("Location: thank-you.html" );
+    } else {
+        header("Location: 404.html" );
+    }
 } else {
-    header("Location: /404" );
+    header("Location: 404.html" );
 }
