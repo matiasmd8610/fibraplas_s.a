@@ -82,3 +82,37 @@ function setNavigation() {
 }
 
 setNavigation();
+
+/*BARBA JS FOR TRANSITIONS BETWEEN PAGES ONLY DESKTOP
+***********************************************************/
+function isDesktop() {
+    return window.matchMedia("(min-width: 769px)").matches;
+}
+
+function handleResizeOrLoad() {
+  if (isDesktop()) {
+      barba.init({
+          transitions: [
+              {
+                  name: 'fade',
+                  leave(data) {
+                      return gsap.to(data.current.container, {
+                          opacity: 0,
+                          duration: 0.5
+                      });
+                  },
+                  enter(data) {
+                      btnCloseMenu.click();
+                      return gsap.from(data.next.container, {
+                          opacity: 0,
+                          duration: 0.5
+                      });
+                  }
+              }
+          ]
+      });
+  }
+}
+
+window.addEventListener("load", handleResizeOrLoad);
+window.addEventListener("resize", handleResizeOrLoad);

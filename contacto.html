@@ -14,7 +14,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
-<body>
+<body data-barba="wrapper">
 
     <!-- SCROLL PROGRRESS INDICATION: Begin -->
     <div id="progress-bar">
@@ -134,7 +134,7 @@
     </header>
     <!-- HEADER: End -->
 
-    <main id="main" class="min-h-screen">
+    <main id="main" class="min-h-screen" data-barba="container" data-barba-namespace="contact">
         <section class="sectionForm !py-20">
             <div class="container relative z-10">
                 <div class="grid lg:grid-cols-2 gap-10 items-start">
@@ -166,7 +166,7 @@
                     </div>
                     <div>
                         <h2 class="mb-12 lg:mb-16 text-center">Dejanos tu consulta aquí</h2>
-                        <form id="contact-form" class="w-full lg:w-[650px] mx-auto" method="post" action='sendmail.php'>
+                        <form id="contact-form" class="w-full lg:w-[650px] mx-auto max-w-full" method="post" action='sendmail.php'>
                             <div class='form-group mb-6'>
                                 <input class='p-3 px-4 w-full rounded-lg text-base focus:outline-none focus:outline-[3px] focus:outline-greenMain focus:outline-offset-0 transition-all' type='text' name='name' id='name' placeholder='Nombre y Apellido' autocapitalize="name" />
                                 <div id="name-error" class="error-msg">Nombre inválido</div>
@@ -226,6 +226,8 @@
 
     <!-- SCRIPTS: Begin -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="assets/scripts/scripts.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script>

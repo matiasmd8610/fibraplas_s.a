@@ -13,7 +13,7 @@
     <title>Productos y Sistemas FIBRAPLAS</title>
 </head>
 
-<body>
+<body data-barba="wrapper">
 
      <!-- SCROLL PROGRRESS INDICATION: Begin -->
     <div id="progress-bar">
@@ -133,7 +133,7 @@
     </header>
     <!-- HEADER: End -->
 
-    <main>
+    <main data-barba="container" data-barba-namespace="products">
         <!-- PRODUCTOS: Begin -->
         <section class="productos">
             <div class="container">
@@ -329,6 +329,8 @@
 
      <!-- SCRIPTS: Begin -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="assets/scripts/scripts.js"></script>
     <!-- SCRIPTS: End -->
 

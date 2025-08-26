@@ -27,7 +27,7 @@ $body = <<<HTML
 HTML;
 
 // Datos de la cuenta de correo utilizada para enviar vía SMTP
-$smtpHost = "ivar1.toservers.com";  // Dominio alternativo brindado en el email de alta 
+$smtpHost = "smtp.fibraplas.com.ar";  // Dominio alternativo brindado en el email de alta 
 $smtpUsuario = "contacto@fibraplas.com.ar";  // Mi cuenta de correo
 $smtpClave = "Fibraplas2022";  // Mi contraseña
 
