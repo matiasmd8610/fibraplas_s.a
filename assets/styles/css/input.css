@@ -165,10 +165,10 @@ body {
 }
 
 main {
-  margin-top: 62px;
+  margin-top: 72px;
 
   @media (width >=992px) {
-    margin-top: 116px;
+    margin-top: 133px;
   }
 }
 
@@ -279,8 +279,9 @@ header {
 
   &.sticky {
     box-shadow: 0 0 12px 0px #9d9d9d;
+    background-color: #d9f5ff;
     animation: transitionHeader 1s;
-    background-color: rgba(255, 255, 255, 0.9);
+    /* background-color: rgba(255, 255, 255, 0.9); */
 
     .header-top {
       display: none;
@@ -465,17 +466,25 @@ header {
 }
 
 .hero-home {
-  /* background-image: url('../../images/hero_home_mobile.jpg'); */
-  background-image: url('../../images/hero_fibraplas_03.jpg');
-  height: calc(100vh - 170px);
+  /* background-image: url('../../images/hero_home_02.jpg'); */
+  /* height: calc(100dvh - 235px); */
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center center;
-  background-color: var(--color-blue-main);
+  background-position: center top;
+  /* padding-top: 0; */
+  /* background-color: var(--color-blue-main); */
   
   @media (width >=992px) {
-    height: calc(100vh - 220px);
+    /* height: calc(100dvh - 125px); */
+    /* height: 1100px; */
   }
+
+  /* img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left top;
+  } */
 }
 
 .main-banner {
