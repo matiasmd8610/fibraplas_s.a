@@ -1,5 +1,3 @@
-User-agent: *
-Disallow:
-Allow: /
-
-Sitemap: https://fibraplas.com.ar/sitemap.xml
+user-agent: *
+disallow:
+allow: /
